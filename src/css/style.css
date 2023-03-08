@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  background-color: #000;
+  height: 65px;
+  padding: 0px 10%;
+  margin-bottom: 20px;
+}
+#navbar img {
+  width: 100px;
+  margin: 0px 20px;
+}
+#navbar a, #navbar #bouton_SeConnecter {
+  color: #fff;
+  text-decoration: none;
+  padding: 0px 20px;
+  cursor: pointer;
+}
+#navbar a:hover, #navbar #bouton_SeConnecter:hover {
+  text-decoration: underline;
+}
+
+#menu_connexion, #lien_menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#bouton_Demarrer_Essai_Gratuit {
+  color: #000;
+  background: #fff;
+  padding: 10px 20px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
