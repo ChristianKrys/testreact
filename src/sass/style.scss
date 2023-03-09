@@ -4,9 +4,16 @@
 //@import './mixins';
 // @import './placeholders';
  
+$fontColor : rgba(100,100,100,0.8);
 
 *{ padding: 0; margin: 0; box-sizing: border-box;}
-body{font-family: Arial, Helvetica, sans-serif;}
+body{font-family: Arial, Helvetica, sans-serif;color:$fontColor}
+main{
+    width: 80%;
+    margin: auto;    
+}
+
+
 
 #navbar{
     display: flex;
@@ -19,7 +26,13 @@ body{font-family: Arial, Helvetica, sans-serif;}
     padding: 0px 10%;
     margin-bottom: 20px;
 
-    img{ width: 100px; margin: 0px 20px; }
+    img{ 
+        $coul:#f6ce08f7;
+        width: 40px;
+        margin: 0px 20px;
+        box-shadow: 2px 2px 2px 2px rgba($coul,0.6);//#f6ce08f7;       
+        border-radius: 25px;
+    }
 
     a,#bouton_SeConnecter{
         color: #fff;
@@ -29,7 +42,7 @@ body{font-family: Arial, Helvetica, sans-serif;}
         &:hover{text-decoration: underline;}        
     }    
 }
-#menu_connexion,#lien_menu{display: flex; flex-direction: row;align-items: center;}
+#menu_connexion,#lien_menu,#bienvenue{display: flex; flex-direction: row;align-items: center;}
 #bouton_Demarrer_Essai_Gratuit{
     color: #000;
     background: #fff;
@@ -37,6 +50,97 @@ body{font-family: Arial, Helvetica, sans-serif;}
     height: 40px;
     cursor: pointer;    
 }
+
+#bienvenue{
+    margin-top: 70px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#logo_secret{
+    width: 10%;
+    min-width: 100px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px ;
+}
+.heading{
+    text-align: center;
+    font-size: 4em;
+    font-weight: bold;    
+}
+#imageFrame{
+    display: flex; flex-direction: row;align-items: center; flex-wrap: wrap; justify-content: space-around;
+    width: 100%;
+    min-width: 600px;
+    margin: 50px 50px;
+
+    img{
+        width: 300px;        
+        border-radius: 20px;
+        box-shadow: 15px 15px 15px $fontColor;
+    }
+}
+
+.cadreImage{
+    position: relative;    
+    margin: 20px 20px;
+}
+.suppImage{
+    position: absolute;
+    top: 10px;
+    left: 10px;    
+    background:#fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding-top: 2px;
+    padding-left: 4px;
+    cursor: pointer;  
+    &:hover{
+        background: #f00;
+        color: #000;
+    }  
+}
+
+#form{
+    display: flex; justify-content: center; align-items: center;
+    input[type="text"],button{
+        color: #000;        
+        padding: 10px 20px;
+        height: 50px;         
+        font-size: 1.5rem;
+        margin: 50px 5px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px $fontColor;
+        border: 1px solid $fontColor;
+    }
+    input[type="text"]{
+        outline:none;
+        &:hover{border : 2px solid rgba(#0f0,0.3);}
+    }
+    button,#Annuler{
+        cursor: pointer; padding: 0px 30px; 
+        &:hover{
+            border : 2px solid rgba(#0f0,0.3);
+            background-color: rgba(#0f0,0.3);
+        }
+    }
+    button:last-child{
+        &:hover{
+            border : 2px solid rgba(#f00,0.3);
+            background-color: rgba(#f00,0.3);
+        }
+    }
+
+}
+
+.cacher{display: none;}
+
+
+
+
+
+
 
 
 

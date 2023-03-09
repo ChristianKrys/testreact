@@ -10,18 +10,15 @@ import "./css/style.css";
 class App extends React.Component{
     
     constructor(props){
-        super(props)
-        this.state = {etat1:"",etat2:""}        
+        super(props);
+        this.state = {etat1:"",etat2:""} ;
+        document.title = this.props.mon_titre;
     }
 
 
 
     render(){        
-        return <h1 className="heading">
-                    Hello world !<br/>
-                    {this.props.mon_titre}<br/>
-                    {this.props.salutation}
-                </h1>;
+        return <h1 className="heading">Hello, {this.props.salutation}</h1>;
     }
 }
 
