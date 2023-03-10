@@ -72,7 +72,7 @@ export default function DisplayPic(){
     
     return(         
         <>            
-            {viderTout.current?console.log(<ImageDisplay/>):<ImageDisplay />}
+            {viderTout.current?"":<ImageDisplay />}
             <InputTemplate /> 
             {console.log("Appel du render")}
         </>               

@@ -1,3 +1,4 @@
+import {createRoot} from 'react-dom/client';/*Pour pouvoir utiliser createRoot*/
 import ReactDOM from "react-dom"; /*Pour pouvoir utiliser ReactDOM*/
 import React from "react"; /*Pour pouvoir utiliser les composants de classes*/
 import App from "./app";
@@ -5,11 +6,9 @@ import Navbar from "./navbar";
 import DisplayPic from "./displayPic";
 
 
-let titre = "Bonjour le mode";
+let titre = "Ndjomba secret";
 let salut = "les Ndjombayeuses !"
 
-const conteneur = document.getElementById('root');
-//const composant = <App mon_titre={titre} salutation={salut}/>
 
 const template = (
   <>
@@ -28,7 +27,10 @@ const template = (
   </>
 );
 
-ReactDOM.render(template,conteneur);
+//ReactDOM.render(template,conteneur); //--ancien--
+const conteneur = document.getElementById('root');
+const racine = createRoot(conteneur);
+racine.render(template);
 
 
 
