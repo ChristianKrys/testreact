@@ -2,9 +2,10 @@ import React, {useState, useEffect, useRef} from 'react';
 
 export default function DisplayPic(){
     
-    const listImages = ['sacret-1.jpg','sacret-2.png','sacret-3.jpg','sacret-4.png'];
+    const listImages = ['sacret-1.jpg','sacret-2.png','sacret-3.jpg','sacret-4.png','fly1.png'];
     const [tabImages,setTabImages] = useState([...listImages]); 
     const [cacherBoutonSupprime,steCacherBoutonSupprime] = useState(-1);
+    const [zoomerImage,setZoomerImage] = useState(-1);
     const [actif,setActif] = useState(false);
     const viderTout = useRef(false);
     
@@ -37,11 +38,13 @@ export default function DisplayPic(){
         )
     }
 
-
     function ImageDisplay(){
         return(
-            <>
-                <div id="imageFrame">
+            <>                
+                <div id="cadrezoomerImage">
+                    {(zoomerImage >= 0) ? <img className='secret' id="zoomerImage" src={"images/"+tabImages[zoomerImage]} onClick={()=>setZoomerImage(-1)}/> : null }
+                </div>
+                <div id="imageFrame">                    
                     {tabImages.map((imageName,index)=> {                                
                         return (
                             <div className='cadreImage' key={index} 
@@ -50,7 +53,7 @@ export default function DisplayPic(){
                                 
                                 
                                 <div className={`suppImage ${(cacherBoutonSupprime >= 0)?"":"cacher"}`} onClick={()=>setTabImages(tabImages.filter((nomImane,i) => nomImane !== imageName))}>X</div>                                   
-                                <img className='secret' src={"images/"+imageName}/>                        
+                                <a href="#cadrezoomerImage"><img className='secret' src={"images/"+imageName} onClick={()=>setZoomerImage(index)}/></a>                        
                             </div>
                         )
                         } 

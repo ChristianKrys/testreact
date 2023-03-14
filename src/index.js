@@ -4,10 +4,12 @@ import React from "react"; /*Pour pouvoir utiliser les composants de classes*/
 import App from "./app";
 import Navbar from "./navbar";
 import DisplayPic from "./displayPic";
+import "./css/style.css";
+import FilterableProductTable from "./produit";
 
 
 let titre = "Ndjomba secret";
-let salut = "les Ndjombayeuses !"
+let salut = "les Ndjombayeuses nouveau !"
 
 
 const template = (
@@ -16,13 +18,12 @@ const template = (
         <Navbar />
       </header>
       <main>        
+        <FilterableProductTable />
         <div id="bienvenue">
           <App mon_titre={titre} salutation={salut}/>          
           <img src="./images/logo-secret.png" alt="" id="logo_secret"/>
         </div>
-        <DisplayPic />
-
-             
+        <DisplayPic />     
       </main>
   </>
 );

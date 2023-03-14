@@ -1,6 +1,6 @@
 
 import React from "react"; /*Pour pouvoir utiliser les composants de classes*/
-import "./css/style.css";
+//import "./css/style.css";
 
 /* function App(props){
     return <h1 className="heading">Hello world !<br/>{props.mon_titre}</h1>;
