@@ -6,6 +6,8 @@ import Navbar from "./navbar";
 import DisplayPic from "./displayPic";
 import "./css/style.css";
 import FilterableProductTable from "./produit";
+import Correction from './correction';
+import Apli, {TodoList,PostTable} from './test';
 
 
 let titre = "Ndjomba secret";
@@ -17,8 +19,16 @@ const template = (
       <header>
         <Navbar />
       </header>
-      <main>        
-        <FilterableProductTable />
+      <main>  
+        <Apli/> 
+        <div className="ecartement"></div>
+        <PostTable/>
+        <div className="ecartement"></div>
+        <TodoList/>        
+        <div className="ecartement"></div>     
+        <Correction />
+        <div className="ecartement"></div>
+        <FilterableProductTable/>
         <div id="bienvenue">
           <App mon_titre={titre} salutation={salut}/>          
           <img src="./images/logo-secret.png" alt="" id="logo_secret"/>

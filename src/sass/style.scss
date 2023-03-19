@@ -157,6 +157,17 @@ main{
     display: flex;
     flex-direction: row;
 }
+.ecartement{height: 200px;}
+table{margin: 20px 0px;}
+tr{            
+    td,th{
+        padding: 10px 10px;
+        width: 25%;        
+        border-bottom: solid 0.5px $fontColor;
+    }   
+}
+
+
 
 
 
