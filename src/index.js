@@ -1,18 +1,22 @@
 import {createRoot} from 'react-dom/client';/*Pour pouvoir utiliser createRoot*/
 import ReactDOM from "react-dom"; /*Pour pouvoir utiliser ReactDOM*/
-import React from "react"; /*Pour pouvoir utiliser les composants de classes*/
+import React, { StrictMode } from "react"; /*Pour pouvoir utiliser les composants de classes*/
+import {BrowserRouter} from 'react-router-dom';
+
+import "./css/style.css";
+import App from "./technos/App";
+
+
+/*
 import App from "./app";
 import Navbar from "./navbar";
 import DisplayPic from "./displayPic";
-import "./css/style.css";
 import FilterableProductTable from "./produit";
 import Correction from './correction';
 import Apli, {TodoList,PostTable} from './test';
 
-
 let titre = "Ndjomba secret";
 let salut = "les Ndjombayeuses nouveau !"
-
 
 const template = (
   <>
@@ -37,11 +41,25 @@ const template = (
       </main>
   </>
 );
+*/
+
+
+const template = (
+  <StrictMode>
+    <BrowserRouter>
+      <App/> 
+    </BrowserRouter>          
+  </StrictMode>
+);
+
 
 //ReactDOM.render(template,conteneur); //--ancien--
 const conteneur = document.getElementById('root');
 const racine = createRoot(conteneur);
 racine.render(template);
+
+
+
 
 
 

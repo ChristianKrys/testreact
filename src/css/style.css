@@ -6,8 +6,8 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: rgba(100, 100, 100, 0.9);
-  background-color: rgba(100, 100, 100, 0.1);
+  color: #000;
+  background-color: #fff;
 }
 
 main {
@@ -87,7 +87,7 @@ main {
 #imageFrame img {
   width: 300px;
   border-radius: 20px;
-  box-shadow: 15px 15px 15px rgba(100, 100, 100, 0.9);
+  box-shadow: 15px 15px 15px #000;
   cursor: pointer;
 }
 
@@ -125,7 +125,7 @@ main {
 #cadrezoomerImage img {
   width: 60%;
   border-radius: 20px;
-  box-shadow: 15px 15px 15px rgba(100, 100, 100, 0.9);
+  box-shadow: 15px 15px 15px #000;
   cursor: pointer;
   margin-top: 30px;
 }
@@ -142,8 +142,8 @@ main {
   font-size: 1.5rem;
   margin: 50px 5px;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.9);
-  border: 1px solid rgba(100, 100, 100, 0.9);
+  box-shadow: 5px 5px 5px #000;
+  border: 1px solid #000;
 }
 #form input[type=text] {
   outline: none;
@@ -196,7 +196,132 @@ table {
 tr td, tr th {
   padding: 10px 10px;
   width: 25%;
-  border-bottom: solid 0.5px rgba(100, 100, 100, 0.9);
+  border-bottom: solid 0.5px #000;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 20px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu_techno {
+  height: 65px;
+  padding: 20px;
+  font-size: 1.2em;
+}
+.menu_techno ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.activeLink {
+  font-weight: bold;
+  color: #07c5fa;
+}
+
+.home {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+.home h1 {
+  margin: 20px 0px;
+}
+
+.techno-add {
+  width: 60%;
+  min-width: 500px;
+  margin: auto;
+}
+.techno-add form, .techno-add input, .techno-add textarea, .techno-add select {
+  padding: 1rem;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+.techno-add form {
+  background-color: #f5f5f5;
+}
+.techno-add label {
+  margin-top: 20px;
+}
+.techno-add input[type=submit] {
+  background-color: rgba(27, 84, 27, 0.9);
+  cursor: pointer;
+}
+
+input, textarea, select {
+  font-size: 1.2rem;
+}
+input:hover, textarea:hover, select:hover {
+  outline: none;
+  border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.technology {
+  width: 100%;
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+}
+.technology:hover {
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  box-shadow: 5px 5px 5px rgba(0, 255, 0, 0.3);
+}
+.technology p {
+  padding: 0.3rem;
+}
+
+.techno-list {
+  width: 60%;
+  min-width: 500px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.techno-element {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#category {
+  font-style: italic;
+}
+
+.btn-delete {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 40%;
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  cursor: pointer;
+}
+.btn-delete:hover {
+  background-color: rgb(255, 0, 0);
 }
 
 /*# sourceMappingURL=style.css.map */
