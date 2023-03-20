@@ -1,6 +1,7 @@
 const AfficheTechno = (props) => {
     const {techno,handleDelete} = props;
     const initTechno = {
+        id:'',
         name:'',
         category:'',
         description:''

@@ -224,8 +224,9 @@ a{
         margin-top: 20px;
     }
     input[type="submit"]{
-        background-color: rgba(rgb(27, 84, 27),0.9);
+        background-color: #4caf50;
         cursor: pointer;
+        &:active{background-color: rgba(#7f4caf,0.9);}
     }
 }
 

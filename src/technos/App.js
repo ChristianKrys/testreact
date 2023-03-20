@@ -14,9 +14,11 @@ const App = () => {
         window.localStorage.setItem(technoKey,JSON.stringify(techno)); 
     }
 
-    function handleAddTechno(techno){        
-        saveTechno([...technos,techno])
-        setTechnos([...technos,techno]);                           
+    function handleAddTechno(techno){
+        if(techno.id !== null && techno.id !== ''){
+            saveTechno([...technos,techno])
+            setTechnos([...technos,techno]); 
+        }                          
     }
 
     function handleDelete(id){

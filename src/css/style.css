@@ -265,8 +265,11 @@ a {
   margin-top: 20px;
 }
 .techno-add input[type=submit] {
-  background-color: rgba(27, 84, 27, 0.9);
+  background-color: #4caf50;
   cursor: pointer;
+}
+.techno-add input[type=submit]:active {
+  background-color: rgba(127, 76, 175, 0.9);
 }
 
 input, textarea, select {

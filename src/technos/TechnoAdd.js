@@ -18,7 +18,8 @@ const TechnoAdd = (props) => {
 
     function handleSubmit(evt){
         evt.preventDefault();
-        handleAddTechno(newTechno);        
+        handleAddTechno(newTechno); 
+        setNewTechno(initTechno);
     }
 
     function handleOnChange(e){
