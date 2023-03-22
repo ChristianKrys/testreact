@@ -1,4 +1,4 @@
-* {
+*, *::after, *::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -6,325 +6,217 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: #000;
-  background-color: #fff;
 }
 
-main {
-  width: 80%;
+.app {
+  width: 760px;
   margin: auto;
 }
 
-#navbar {
+.navbar {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  color: #fff;
-  background-color: #000;
-  height: 65px;
-  padding: 0px 10%;
-  margin-bottom: 20px;
-}
-#navbar img {
-  width: 40px;
-  margin: 0px 20px;
-  box-shadow: 2px 2px 2px 2px rgba(246, 206, 8, 0.6);
-  border-radius: 25px;
-}
-#navbar a, #navbar #bouton_SeConnecter {
-  color: #fff;
-  text-decoration: none;
-  padding: 0px 20px;
-  cursor: pointer;
-}
-#navbar a:hover, #navbar #bouton_SeConnecter:hover {
-  text-decoration: underline;
-}
-
-#menu_connexion, #lien_menu, #bienvenue {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-#bouton_Demarrer_Essai_Gratuit {
-  color: #000;
-  background: #fff;
-  padding: 10px 20px;
-  height: 40px;
-  cursor: pointer;
-}
-
-#bienvenue {
-  margin-top: 70px;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-#logo_secret {
-  width: 10%;
-  min-width: 100px;
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px;
-}
-
-.heading {
-  text-align: center;
-  font-size: 4em;
-  font-weight: bold;
-}
-
-#imageFrame {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  min-width: 600px;
-  margin: 50px 50px;
-}
-#imageFrame img {
-  width: 300px;
-  border-radius: 20px;
-  box-shadow: 15px 15px 15px #000;
-  cursor: pointer;
-}
-
-.cadreImage {
-  position: relative;
-  margin: 20px 20px;
-}
-
-.suppImage {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #fff;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  font-size: 1rem;
-  padding-top: 2px;
-  padding-left: 4px;
-  cursor: pointer;
-}
-.suppImage:hover {
-  background: #f00;
-  color: #000;
-}
-
-#cadrezoomerImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  margin-bottom: 20px;
-  margin-top: 30px;
-}
-#cadrezoomerImage img {
-  width: 60%;
-  border-radius: 20px;
-  box-shadow: 15px 15px 15px #000;
-  cursor: pointer;
-  margin-top: 30px;
+  margin: 10px auto;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
 }
 
-#form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#form input[type=text], #form button {
-  color: #000;
-  padding: 10px 20px;
-  height: 50px;
-  font-size: 1.5rem;
-  margin: 50px 5px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px #000;
-  border: 1px solid #000;
-}
-#form input[type=text] {
-  outline: none;
-}
-#form input[type=text]:hover {
-  border: 2px solid rgba(0, 255, 0, 0.3);
-}
-#form button, #form #Annuler {
-  cursor: pointer;
-  padding: 0px 30px;
-}
-#form button:hover, #form #Annuler:hover {
-  border: 2px solid rgba(0, 255, 0, 0.3);
-  background-color: rgba(0, 255, 0, 0.3);
-}
-#form button:last-child:hover {
-  border: 2px solid rgba(255, 0, 0, 0.3);
-  background-color: rgba(255, 0, 0, 0.3);
-}
-
-.cacher {
-  display: none;
-}
-
-.stockEpuise {
-  color: #f00;
-}
-
-.ProductCategoryRow, .headerRow {
-  font-weight: bold;
-}
-
-.left {
-  width: 25%;
-}
-
-.ProductRow {
-  display: flex;
-  flex-direction: row;
-}
-
-.ecartement {
-  height: 200px;
-}
-
-table {
-  margin: 20px 0px;
-}
-
-tr td, tr th {
-  padding: 10px 10px;
-  width: 25%;
-  border-bottom: solid 0.5px #000;
-}
-
-h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  padding: 20px;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 20px;
-}
-
-h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.menu_techno {
-  height: 65px;
-  padding: 20px;
-  font-size: 1.2em;
-}
-.menu_techno ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-a {
+.logo {
   text-decoration: none;
-  color: black;
-}
-
-.activeLink {
+  font-size: 1.2rem;
+  text-transform: uppercase;
   font-weight: bold;
-  color: #07c5fa;
+  color: rgb(2, 139, 252);
 }
 
-.home {
-  background-color: #f5f5f5;
-  padding: 20px;
-}
-.home h1 {
-  margin: 20px 0px;
+.liens {
+  display: flex;
+  list-style: none;
 }
 
-.techno-add {
-  width: 60%;
+.liens li {
+  margin-left: 2rem;
+}
+
+.liens li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #4b4a4a;
+}
+
+.liens li a:hover {
+  color: #028bfc;
+}
+
+.buttonArticle {
+  background-color: #028bfc;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: #fff !important;
+}
+
+/* .home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    width: 100%;
+} */
+h2 {
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*------ content style --------*/
+.contenu {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bloglist {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+.blog {
+  text-align: left;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+}
+.blog:hover {
+  -webkit-box-shadow: 2px 1px 8px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 2px 1px 8px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 2px 1px 8px 0px rgba(0, 0, 0, 0.7);
+}
+
+.blog-body {
+  font-size: 1.5rem;
+  text-align: justify;
+  color: #333;
+  padding: 20px 0px;
+}
+
+.blog-title {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: #028bfc;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  font-weight: bolder;
+}
+
+.blog-description-date {
+  font-style: italic;
+  color: #5c5b5b;
+}
+
+.blog-author {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1rem;
+  color: #5c5b5b;
+}
+
+.creat-blog {
+  width: 100%;
   min-width: 500px;
   margin: auto;
 }
-.techno-add form, .techno-add input, .techno-add textarea, .techno-add select {
+.creat-blog form, .creat-blog input, .creat-blog textarea, .creat-blog select {
   padding: 1rem;
   width: 100%;
   margin-bottom: 10px;
   border-radius: 10px;
   border: 1px solid #555;
 }
-.techno-add form {
+.creat-blog form {
   background-color: #f5f5f5;
 }
-.techno-add label {
+.creat-blog label {
   margin-top: 20px;
 }
-.techno-add input[type=submit] {
-  background-color: #4caf50;
+.creat-blog input[type=submit] {
+  background-color: #028bfc;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: #fff;
   cursor: pointer;
 }
-.techno-add input[type=submit]:active {
-  background-color: rgba(127, 76, 175, 0.9);
+.creat-blog input[type=submit]:active {
+  background-color: rgba(76, 175, 153, 0.9);
 }
 
 input, textarea, select {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 input:hover, textarea:hover, select:hover {
   outline: none;
   border: 1px solid rgba(0, 255, 0, 0.3);
 }
 
-.technology {
-  width: 100%;
-  border: 1px solid rgba(51, 51, 51, 0.2);
-  border-radius: 10px;
-  padding: 1rem;
-  margin: 1rem;
-}
-.technology:hover {
-  border: 1px solid rgba(0, 255, 0, 0.3);
-  box-shadow: 5px 5px 5px rgba(0, 255, 0, 0.3);
-}
-.technology p {
-  padding: 0.3rem;
-}
-
-.techno-list {
-  width: 60%;
-  min-width: 500px;
-  margin: auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  background-color: #f5f5f5;
-}
-
-.techno-element {
-  width: 100%;
-  border-radius: 10px;
-}
-
-#category {
-  font-style: italic;
-}
-
 .btn-delete {
   width: 100px;
   height: 30px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  margin-left: 40%;
+  border-radius: 5px;
+  padding-top: 5px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 20px;
   border: 1px solid rgba(51, 51, 51, 0.2);
   cursor: pointer;
 }
 .btn-delete:hover {
   background-color: rgb(255, 0, 0);
+  font-weight: bold;
+}
+
+.btn-validate {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  padding-top: 5px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  cursor: pointer;
+}
+.btn-validate:hover {
+  background-color: rgb(0, 255, 0);
+  font-weight: bold;
+}
+
+.btn-retour {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  padding-top: 5px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  cursor: pointer;
+}
+.btn-retour:hover {
+  background-color: #028bfc;
+  font-weight: bold;
+  color: #fff;
+}
+
+.blog-404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
