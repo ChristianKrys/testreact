@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Authentification from "./contexts/Authentification";
 import useRecuperation from "./useRecuperation";
@@ -19,13 +19,15 @@ const Creercompte = () => {
     const [identifiants,setIdentifiants] = useState(emptyIdentifiants);
     const navigate = useNavigate();
     const {userId,setUserId,isAuthenticated,setIsAuthenticated} = useContext(Authentification); 
+    const [error_msg,setError_msg] = useState();
 
     //const [isLoadingCurrentUser,setIsLoadingCurrentUser] = useState(false); 
     let isLoadingCurrentUser = false; 
-
+    
     function handleOnChange(e){
         const target = e.target;
-        setIdentifiants({...identifiants,[target.name]:target.value});        
+        setIdentifiants({...identifiants,[target.name]:target.value}); 
+        setError_msg('');
     }
 
     function getRandomIntCode(){
@@ -51,7 +53,12 @@ const Creercompte = () => {
                 throw Error('Echec de création de compte');
             }
 
-            navigate('/');   //------- redirection apres enregistrement à la racine ---
+            navigate('/login');   //------- redirection apres enregistrement à la racine ---
+            setIdentifiants(emptyIdentifiants);
+
+            setIsAuthenticated(false);
+            alert("Bienvenue "+userData.login+"\n\n Veuillez vous connecter");
+            //navigate('/profile'); 
             
             //navigate(-1);
             //navigate(1);
@@ -59,43 +66,26 @@ const Creercompte = () => {
         .then(()=>{
             //console.log('Echec d\'enregistrement');
             isLoadingCurrentUser = false;
-            navigate('/');   //------- redirection apres enregistrement à la racine ---
+            navigate('/login');   //------- redirection apres enregistrement à la racine ---
+            setIdentifiants(emptyIdentifiants);
         })
         .catch((err)=>{
             isLoadingCurrentUser = false;
-            console.log(err.message);
+            console.log(err.message); 
+            setError_msg(err.message);                      
         });
     }
 
-    function idetification(){
-
-        let isIdentified = false;
-        datas.forEach((item)=>{
-            if((item.login !== '') && (item.login === identifiants.login) && (item.password === identifiants.password)){
-                isIdentified = true; 
-                setUserId(item.id);              
-            }
-        })
-        
-        setIsAuthenticated(isIdentified);
-        if(isIdentified){
-            //---- Identification reconnue ------
-            setIdentifiants(emptyIdentifiants);
-            navigate('/');            
-        }else{
-            alert("Désolé, Identifiants inconnus !!");
-        }
-    }
 
     function handleSubmit(evt){
-        console.log(isLoading ,isLoadingCurrentUser);
+        
         evt.preventDefault();         
         
         let nonDisponible = false;
         datas.forEach((item)=>{
             if((item.email !== '') && (item.email === identifiants.email)){
                 nonDisponible = true;                  
-                err_msg = "l'adresse : "+item.email+", a déjà un compte";            
+                err_msg = "l'adresse : "+item.email+" a déjà un compte";            
             }
             if((item.login !== '') && (item.login === identifiants.login) && (item.password === identifiants.password)){
                 nonDisponible = true; 
@@ -113,11 +103,10 @@ const Creercompte = () => {
                 //------- Code vérifié ------
                 //alert("------- Code vérifié ------");
                 
-                addUser(identifiants);
-
-                idetification();
+                addUser(identifiants);                
 
                 console.log("Nouveau compte créé")
+                
             }else{
                 code_msg = "Code incorrecte";
                 console.log(code_msg);
@@ -125,6 +114,7 @@ const Creercompte = () => {
             
         }else{
             console.log(err_msg);
+            setError_msg(err_msg); 
         }    
         isLoadingCurrentUser = false;                  
     }
@@ -134,6 +124,7 @@ const Creercompte = () => {
         <div className="Creercompte">                   
             {(isLoading || isLoadingCurrentUser ) && <h2>Vérification en cours ... </h2>}
             {error && <h2 style={{color:'red'}}>{error}</h2>}
+            {(error_msg !== "") && <h2 style={{color:'red'}}>{error_msg}</h2>}
 
             <form action="" onSubmit={handleSubmit} className="form_login">            
                 <fieldset className="fieldset_form">                                        

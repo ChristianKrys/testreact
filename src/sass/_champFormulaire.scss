@@ -54,6 +54,13 @@
         background-color: #fa1313;
     }
 }
+
+.btn_profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 #btn_validation_profile{margin-right: 1rem;}
 
 .userIdentity{
