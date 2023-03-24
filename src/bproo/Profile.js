@@ -179,10 +179,10 @@ const Profile = () => {
 
     function handleSubmit(e){
 
-        //------ Ajout de nouweau profil -------        
+        //------ Ajout de nouweau profil -------       
 
         e.preventDefault();
-
+        
         isLoadingCurrentUser = true;
         if(userId!==0 && userId!==null){
             updateUser({
@@ -191,7 +191,7 @@ const Profile = () => {
                 telephone:userData.telephone,
                 urlPhoto:userData.urlPhoto
             });
-        }else{
+        }else{            
             addUser();
         }
     }

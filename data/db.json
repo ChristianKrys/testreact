@@ -53,6 +53,12 @@
       "login": "b",
       "password": "b",
       "email": "b@b.fr"
+    },
+    {
+      "login": "ff",
+      "password": "ff",
+      "email": "kkrys885@yahoo.fr",
+      "id": 3
     }
   ],
   "profile": [

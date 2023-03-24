@@ -88,7 +88,8 @@ const Creercompte = () => {
     }
 
     function handleSubmit(evt){
-        evt.preventDefault(); 
+        console.log(isLoading ,isLoadingCurrentUser);
+        evt.preventDefault();         
         
         let nonDisponible = false;
         datas.forEach((item)=>{
@@ -147,7 +148,7 @@ const Creercompte = () => {
                     <label htmlFor="password" className="label_form">Mot de passe</label>
                     <input onChange={(e)=>{handleOnChange(e)}} type="password" id="password" className="password sai_text" name="password" value={identifiants.password} required/>                
 
-                    {<input className={(!isLoading && !isLoadingCurrentUser)?"btn_validation":"btn_indisponible"} type="submit" value={(!isLoading && !isLoadingCurrentUser)?'Créer':"Enregistrement en cours ..."} disabled={(!isLoading && !isLoadingCurrentUser)} />}                                             
+                    {<input className={(!isLoading && !isLoadingCurrentUser)?"btn_validation":"btn_indisponible"} type="submit" value={(!isLoading && !isLoadingCurrentUser)?'Créer':"Enregistrement en cours ..."} disabled={!(!isLoading && !isLoadingCurrentUser)} />}                                             
                 </fieldset>
             </form>
         </div>
