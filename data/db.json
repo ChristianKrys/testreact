@@ -40,5 +40,35 @@
       "date": "22/03/2023 10:39:40",
       "id": 5
     }
+  ],
+  "identifiants": [
+    {
+      "id": 1,
+      "login": "a",
+      "password": "a",
+      "email": "a@a.cm"
+    },
+    {
+      "id": 2,
+      "login": "b",
+      "password": "b",
+      "email": "b@b.fr"
+    }
+  ],
+  "profile": [
+    {
+      "id": 1,
+      "nom": "ANTONY NEW",
+      "prenom": "Du Palais",
+      "telephone": "+237 652985874",
+      "urlPhoto": "images/fem1.jpg"
+    },
+    {
+      "nom": "TONTON EBOGO",
+      "prenom": "Junior",
+      "telephone": "4552155",
+      "urlPhoto": "",
+      "id": 2
+    }
   ]
 }

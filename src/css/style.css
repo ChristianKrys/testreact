@@ -9,7 +9,7 @@ body {
 }
 
 .app {
-  width: 760px;
+  width: 1000px;
   margin: auto;
 }
 
@@ -218,5 +218,138 @@ input:hover, textarea:hover, select:hover {
   align-items: center;
   margin: 2rem 0;
 }
+
+.form_login {
+  min-width: 300px;
+  width: 500px;
+  margin: 50px auto;
+}
+
+.fieldset_form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.fieldset_form {
+  background-color: rgba(2, 139, 252, 0.1);
+  border-radius: 0.4rem;
+}
+
+.fieldset_form_legend {
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: #028bfc;
+  border-radius: 0.3rem;
+  padding: 0.3rem 1rem;
+  color: #fff;
+}
+
+.label_form {
+  font-style: italic;
+}
+
+.sai_text {
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn_validation {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: #028bfc;
+  border-radius: 0.3rem;
+  padding: 0.3rem 1rem;
+  color: #fff;
+}
+.btn_validation:hover {
+  background-color: #046109;
+}
+
+.btn_supprime {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: #028bfc;
+  border-radius: 0.3rem;
+  padding: 0.3rem 1rem;
+  color: #fff;
+}
+.btn_supprime:hover {
+  background-color: #fa1313;
+}
+
+.btn_deconnexion {
+  padding: 0.5rem;
+}
+.btn_deconnexion:hover {
+  cursor: pointer;
+  border-radius: 0.3rem;
+  color: #fff !important;
+  background-color: #fa1313;
+}
+
+#btn_validation_profile {
+  margin-right: 1rem;
+}
+
+.userIdentity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.userIdentityData {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  width: 50%;
+}
+
+.userIdentityPhoto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cadrePhoto {
+  width: 8rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+}
+.cadrePhoto img {
+  width: 100%;
+  background-color: aqua;
+  border-radius: 50%;
+  box-shadow: 4px 4px 4px 3px #777;
+}
+
+.urlPhoto {
+  font-size: 1rem;
+}
+
+.btn_indisponible {
+  font-size: 1, 5rem;
+  background-color: transparent;
+  border-radius: 0.3rem;
+  padding: 0.3rem 1rem;
+  border: 1px solid #555;
+  color: #555;
+}
+
+/* .visually-hidden{
+    position: absolute !important;
+    height: 5px;
+    width: 5px;
+    overflow: hidden;
+    clip: rect(5px,5px,5px,5px);
+}
+input.visually-hidden:is(:focus,:focus-within)+label{outline: thin dotted}
+ */
 
 /*# sourceMappingURL=style.css.map */
